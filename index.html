@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>productpage</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="top">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="navbar">
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Order</a></li>
+                            <li><a href="#">Catering</a></li>
+                            <li><a href="#">Story</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="text1">
+                <h1>Chick-fil-A<span class="tiny">&copy;</span> nuggets</h1>
+            </div>
+            <div id="middle">
+
+                <div id="gal1">
+
+                    <div class="minis">
+                        <a href="#" data-image="images/small/nuggets 1.png" data-zoom-image="images/large/image1.jpg">
+                            <img class="zoomable_images" src="images/thumb/nuggets 1.png" />
+                        </a>
+                    </div>
+
+                    <div class="minis">
+                        <a href="#" data-image="images/small/nuggets 2.png" data-zoom-image="images/large/image2.jpg">
+                            <img class="zoomable_images" src="images/thumb/nuggets 2.png" />
+                        </a>
+                    </div>
+
+                    <div class="minis">
+                        <a href="#" data-image="images/small/nuggets 3.png" data-zoom-image="images/large/image3.jpg">
+                            <img class="zoomable_images" src="images/thumb/nuggets 3.png" />
+                        </a>
+                    </div>
+
+                    <div class="minis">
+                        <a href="#" data-image="images/small/nuggets 4.png" data-zoom-image="images/large/image4.jpg">
+                            <img class="zoomable_images" src="images/thumb/nuggets 4.png" />
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="featured">
+                    <img class="big" src="images/small/nuggets 1.png" data-zoom-image="images/large/image1.jpg" />
+                </div>
+
+                <div class="tabs">
+                    <div class="tab-container second">
+                        <button class="tab-button active" data-tab="1">Info</button>
+                        <button class="tab-button" data-tab="2">Options</button>
+                        <button class="tab-button" data-tab="3">Ingredients</button>
+                        <div class="tab-background"></div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="ta-tab-item active" data-tab="1">Bite-sized pieces of boneless<br /> chicken breast,
+                            seasoned to<br /> perfection, freshly breaded<br /> and pressure cooked in 100%<br />
+                            refined peanut oil. Available<br /> with choice of dipping sauce.</div>
+                        <div class="ta-tab-item" data-tab="2">
+                            <ul>
+                                <li>5 ct Chick-fil-A Nuggets</li>
+                                <li>8 ct Chick-fil-A Nuggets</li>
+                                <li>12 ct Chick-fil-A Nuggets</li>
+                                <li>30 ct Chick-fil-A Nuggets</li>
+                            </ul>
+                        </div>
+                        <div class="ta-tab-item" data-tab="3">
+                            <ul>
+                                <li>Chicken breast</li>
+                                <li>Salt</li>
+                                <li>Sugar</li>
+                                <li>Paprika</li>
+                                <li>Enriched bleached flour</li>
+                                <li>Nonfat milk</li>
+                                <li>Leavening</li>
+                                <li>Soybean oil</li>
+                                <li>Pasteurized nonfat milk</li>
+                                <li>Pasteurized egg</li>
+                                <li>Fully refined peanut oil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="text1">
+                <h1>Related Products</h1>
+            </div>
+            <div id="bottom">
+                <div class="related">
+                    <img src="images/featured 1.png">
+                </div>
+                <div class="related">
+                    <img src="images/featured 2.png">
+                </div>
+                <div class="related">
+                    <img src="images/featured 3.png">
+                </div>
+                <div class="related">
+                    <img src="images/featured 4.png">
+                </div>
+                <div class="related">
+                    <img src="images/featured 5.png">
+                </div>
+            </div>
+    </div>
+    </main>
+    <footer>
+        Not associated with Chick-fil-A or CFA Properties (personal project)<br>
+        Hannah Bebinger, VCT 3660
+    </footer>
+
+    <!--Links to jquery hosted on google and the elevatezoom library in our js folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='js/elevatezoom.js'></script>
+    <script>
+        //Make the zoom happen for the larger image.
+        $(".big").elevateZoom({ zoomType: 'inner', gallery: 'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif' });
+        //Make the smaller images replace the larger image when clicked.
+        $(".big").bind("click", function (e) {
+            var ez = $('.zoomable_images').data('elevateZoom');
+            $.fancybox(ez.getGalleryList());
+            return false;
+        });
+    </script>
+    </div>
+</body>
+
+</html>

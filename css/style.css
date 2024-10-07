@@ -1,0 +1,213 @@
+#wrapper {
+  background-color: #F5F5F5;
+  max-width: 1012px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 25px;
+  color: #DA0630;
+  font-family: Arial;
+}
+
+h4 {
+  color: #DA0630;
+  font-family: Arial;
+}
+
+#top {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  justify-content: flex-start;
+  background-color: #DA0630;
+  margin: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: Arial;
+}
+
+.navigation a:hover {
+  background-color: brown;
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  #middle {
+    flex-wrap: wrap;
+  }
+
+  #gal1 {
+    align-items: center;
+  }
+
+  .extras {
+    align-self: center;
+  }
+}
+
+.tiny {
+  font-size: small;
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -1.2em;
+}
+
+#text1 {
+  background-color: #F5F5F5;
+}
+
+#middle {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#gal1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: space-evenly;
+}
+
+.minis {
+  height: 100px;
+  width: 100px;
+  margin: 25px;
+}
+
+.featured {
+  background-color: #F5F5F5;
+  flex: 8 8 auto;
+  margin: 25px;
+  align-self: center;
+}
+
+.zoomWrapper {
+  background-color: white;
+}
+
+.big img {
+  max-width: 100%;
+}
+
+.tabs {
+  margin: 25px;
+  font-family: Arial;
+  align-self: center;
+}
+
+.tab-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-button.active {
+  background-color: transparent;
+  color: white;
+}
+
+.tab-container.second .tab-background {
+  background-color: #DA0630;
+}
+
+.tab-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.3s, left 0.3s;
+  border-radius: 20px;
+}
+
+.tab-content {
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+.ta-tab-item {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-height: 250px;
+}
+
+.ta-tab-item.active {
+  display: block;
+}
+
+#bottom {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.related {
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+}
+
+footer {
+  background-color: #DA0630;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  font-family: Arial;
+  font-size: .75em;
+}
